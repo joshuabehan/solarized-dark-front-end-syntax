@@ -1,33 +1,57 @@
 .source.css {
 
+  //------------------------------------\\
+  //  #PUNCTUATION
+  //------------------------------------\\
+
   .punctuation {
     &.separator,
     &.terminator {
       color: @syntax-text-color;
     }
-    &.property-list.begin,
-    &.property-list.end {
-      color: @red;
-    }
     &.section.function {
       color: @cyan;
     }
   }
-
-  .entity.name {
-    color: @green;
+  .brace {
+    color: @base1;
   }
-  .attribute-name.class,
-  .id {
+
+
+
+  //------------------------------------\\
+  //  #SELECTORS
+  //------------------------------------\\
+
+  .attribute-name.class {
     color: @blue;
   }
   .pseudo-element,
   .pseudo-class {
-    color: @orange;
+    color: @yellow;
+  }
+
+
+
+  //------------------------------------\\
+  //  #PROPERTIES
+  //------------------------------------\\
+
+  //for properties that are invalid
+  .property-list {
+    color: @base01;
+  }
+  .property-name {
+    color: @base1;
   }
 
   .property-value {
-    color: @cyan;
+    //for values that are invalid
+    color: @base01;
+    &.support {
+      //for supported values
+      color: @cyan;
+    }
   }
   .constant.numeric {
     color: @cyan;
@@ -45,10 +69,19 @@
     }
   }
 
+
+
   .keyword.important {
     color: @red;
   }
 
+  .variable {
+    color: @green;
+  }
+
+  .function {
+    color: @violet;
+  }
 }
 
 
